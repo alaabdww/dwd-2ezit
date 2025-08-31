@@ -1,0 +1,37 @@
+body {
+   background-color: rgb(215, 176, 252);
+   margin: 20px;
+}
+
+.container {
+   display: flex;
+   gap: 20px;
+   align-items: flex-start;
+}
+
+.container img {
+   max-width: 200px;
+   height: auto;
+   border-radius: 8px;
+}
+
+form {
+   display: grid;
+   grid-template-columns: 140px 260px;
+   gap: 10px;
+   padding: 10px;
+}
+
+form label {
+   align-self: center;
+}
+
+form input {
+   width:100%;
+  padding:8px;
+}
+
+#plaatsBtn {
+   align-self: flex-start;
+   padding: 8px 14px;
+}
