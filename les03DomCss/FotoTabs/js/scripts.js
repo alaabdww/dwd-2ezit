@@ -2,6 +2,31 @@ const navFilters = document.querySelectorAll('.nav__filters .filter__tab');
 const numFound = document.querySelector('#numFound');
 const gallery = document.querySelectorAll('#gallery figure');
 let count = 0;
+const header__view = document.querySelectorAll('.header__view a');
+const galleryBox = document.querySelector('#gallery');
+
+header__view.forEach(lnk => {
+   lnk.addEventListener('click', function(e){
+      e.preventDefault();
+
+      const vorige = document.querySelector('.header__view a.active');
+      if (vorige){
+      vorige.classList.remove("active");
+         }
+      let selected = this.id;
+      if (selected == "lnkViewGrid"){
+         this.classList.add('active');
+         galleryBox.classList.remove('list');
+         galleryBox.classList.add('grid');
+      }
+      else if (selected == "lnkViewList"){
+         this.classList.add('active');
+         galleryBox.classList.remove('grid');
+         galleryBox.classList.add('list');
+      }
+   })
+});
+
 
 navFilters.forEach(lnk => {
    lnk.addEventListener('click', function(e){
